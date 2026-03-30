@@ -16,18 +16,17 @@ entity rs232 is
 end rs232;
 
 architecture Behavioral of rs232 is
-  signal rx_data_buf: std_logic_vector (7 downto 0);
+  signal rx_data_buf: std_logic_vector (9 downto 0) := (others => '0');
   signal rx_clk_div_counter: natural range 0 to (CLKI_FREQ / BAUDRATE) + 1;
-  signal rx_bit_counter: natural range 0 to 7;
+  signal rx_bit_counter: natural range 0 to 9;
   type uart_rx_state is (rx_wait_start_bit, rx_get_data, rx_stop_bit);
   signal rx_state, rx_state_next: uart_rx_state;
-  signal rx_clk_en: std_logic_vector;
+  signal rx_clk_en: std_logic;
 begin
-  data_byte_o <= data_buf;
 
-  uart_rx_logic: process(clk_i, state, bit_counter, rx_clk_en, rst_i, RXD_i) is
+  uart_rx_logic: process(clk_i, rx_state, rx_bit_counter, rx_clk_en, rst_i, RXD_i) is
   begin
-    if rsc_i = '1' then
+    if rst_i = '1' then
       rx_state <= rx_wait_start_bit;
       rx_data_buf <= (others => '0');
       rx_bit_counter <= 0;
@@ -39,10 +38,12 @@ begin
           end if;
         when rx_get_data =>
           if rx_clk_en = '1' then
-            if rx_bit_counter >= 7 then
+            if rx_bit_counter >= 9 then
               rx_bit_counter <= 0;
-              rx_state <= rx_stop_bit;
+              data_byte_o <= rx_data_buf(8 downto 1);
+              rx_state <= rx_wait_start_bit;
             else
+              rx_data_buf(rx_bit_counter) <= RXD_i;
               rx_bit_counter <= rx_bit_counter + 1;
             end if;
           end if;

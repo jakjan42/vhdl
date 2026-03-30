@@ -18,11 +18,6 @@ entity display is
 end display;
 
 architecture reg of display is
-  constant DISPLAY_HEX_DIGITS: std_logic_vector16_8 := (
-    x"03",x"f3",x"25",x"0d",x"99",x"49",x"41",x"1f",
-    x"01",x"f9",x"11",x"c1",x"63",x"85",x"61",x"71"
-  );
-
   signal clk_en: std_logic := '0';
   signal counter: natural range 0 to CLKDIV_COEFF - 1;
   constant seg: unsigned (3 downto 0) := X"1";
