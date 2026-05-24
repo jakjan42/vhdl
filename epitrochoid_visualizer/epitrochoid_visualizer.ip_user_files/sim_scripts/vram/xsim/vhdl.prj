@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../lab8a.gen/sources_1/ip/vram/vram_sim_netlist.vhdl" \
+
+# Do not sort compile order
+nosort

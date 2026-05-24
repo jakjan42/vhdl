@@ -1,8 +1,0 @@
-0.7
-2020.2
-Oct 13 2023
-20:21:30
-/home/jak_jan/subjects/ISP/lab5a/lab5a.gen/sources_1/ip/char_mem/char_mem_sim_netlist.vhdl,1777557833,vhdl,,,,char_mem;char_mem_blk_mem_gen_generic_cstr;char_mem_blk_mem_gen_prim_width;char_mem_blk_mem_gen_prim_wrapper_init;char_mem_blk_mem_gen_top;char_mem_blk_mem_gen_v8_4_7;char_mem_blk_mem_gen_v8_4_7_synth,,,,,,,,
-/home/jak_jan/subjects/ISP/lab5a/lab5a.gen/sources_1/ip/fifo_mem/fifo_mem_sim_netlist.vhdl,1777557897,vhdl,,,,fifo_mem;fifo_mem_blk_mem_gen_generic_cstr;fifo_mem_blk_mem_gen_prim_width;fifo_mem_blk_mem_gen_prim_wrapper;fifo_mem_blk_mem_gen_top;fifo_mem_blk_mem_gen_v8_4_7;fifo_mem_blk_mem_gen_v8_4_7_synth;fifo_mem_fifo_generator_ramfifo;fifo_mem_fifo_generator_top;fifo_mem_fifo_generator_v13_2_9;fifo_mem_fifo_generator_v13_2_9_synth;fifo_mem_memory;fifo_mem_rd_bin_cntr;fifo_mem_rd_logic;fifo_mem_rd_status_flags_ss;fifo_mem_reset_blk_ramfifo;fifo_mem_wr_bin_cntr;fifo_mem_wr_logic;fifo_mem_wr_status_flags_ss,,,,,,,,
-/home/jak_jan/subjects/ISP/lab5a/lab5a.sim/sim_2/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-/home/jak_jan/subjects/ISP/lab5a/lab5a.srcs/sim_2/new/mem_tb.vhdl,1777557953,vhdl,,,,mem_tb,,,,,,,,

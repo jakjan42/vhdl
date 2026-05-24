@@ -1,0 +1,2 @@
+singen.vhd,vhdl,xil_defaultlib,../../../../lab8a.gen/sources_1/ip/singen/sim/singen.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

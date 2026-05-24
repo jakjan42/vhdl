@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../lab5a.gen/sources_1/ip/char_mem/char_mem_sim_netlist.vhdl" \
-"../../../../lab5a.gen/sources_1/ip/fifo_mem/fifo_mem_sim_netlist.vhdl" \
-"../../../../lab5a.srcs/sim_2/new/mem_tb.vhdl" \
-
-# Do not sort compile order
-nosort
